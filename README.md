@@ -1,24 +1,23 @@
-# vue-test2
+# Apa itu Dekranasda
+Dekranasda atau Dewan Kerajinan Nasional Daerah adalah tempat bagi wadah karya-karya dari para pengrajin (di Ambon Maluku).
 
-## Project setup
+
+## Untuk menjalankan projek
+Download projek ini agar dapat tersedia pada lokal komputer.
 ```
+git clone https://github.com/diskominfo-ambon/dekranasda.git
+```
+Setelah berhasil mendownload, jalankan perintah untuk menginstall kebutuhan-kebutuhan yang diperlukan untuk menjalankan projek ini (tunggu sampai selesai).
+```
+cd dekranasda
+
 yarn install
 ```
-
-### Compiles and hot-reloads for development
+Jalangkan projek ini dengan perintah berikut
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Referensi
+* https://dekranasda.kalbarprov.go.id/
+* https://dekranasda.jakarta.go.id/
