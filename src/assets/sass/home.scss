@@ -1,0 +1,115 @@
+@import 'variables';
+@import 'mixins';
+@import 'globals';
+
+
+.home {
+  &__information {
+    margin-top: 5rem;
+
+    h1 {
+      font-weight: 700;
+      font-size: 1.9rem;
+      line-height: 40px;
+
+      span {
+        display: block;
+      }
+    }
+    p {
+      line-height: 35px;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .card {
+      &__label {
+        position: relative;
+
+        .label-box {
+          position: absolute;
+          top: -15px;
+          left: -8px;
+        }
+      }
+
+      hr {
+        margin: .5rem 0;
+        display: block;
+      }
+    }
+  }
+  &__gubernur {
+    margin-top: 5rem;
+    background-color: $primary;
+
+    @include breakpoint-down(medium) {
+      padding: 3.80rem;
+      text-align: center !important;
+    }
+
+    .container {
+      img {
+        width: 15.62rem;
+      }
+
+      .row {
+        div {
+          &:first-child {
+
+            @include breakpoint-down(medium) {
+              display: none;
+            }
+          }
+          &:last-child {
+            align-self: center;
+          }
+        }
+      }
+    }
+
+    .gubernur {
+      &__qoute {
+        &-title {
+          color: $white;
+          font-size: 1.5rem;
+          position: relative;
+          left: -2rem;
+          bottom: .9rem;
+          font-weight: 700;
+          @include breakpoint-down(medium) {
+            left: 0;
+          }
+        }
+
+        &-content {
+          position: relative;
+
+          blockquote {
+            font-size: 1.3rem;
+            line-height: 32px;
+            text-align: justify;
+
+            &::before {
+              content: '“';
+              font-size: 5rem;
+              position: absolute;
+              top: 1.125rem;
+              left: -2.5rem;
+            }
+          }
+
+          span {
+            font-size: .8rem;
+            margin-top: 1rem;
+            display: block;
+          }
+
+          h1, span, blockquote {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
