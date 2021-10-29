@@ -1,0 +1,30 @@
+footer {
+  margin: 5rem 0;
+
+  .container {
+    margin-top: 2rem;
+
+    h3 {
+      color: $primary;
+      font-size: 1.2rem;
+      margin-bottom: .9rem;
+      font-weight: 700;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: .5rem;
+
+        a {
+          color: $dark;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

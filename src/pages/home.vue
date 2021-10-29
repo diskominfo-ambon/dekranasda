@@ -90,7 +90,11 @@
   <section class="home__post">
     <b-row>
       <b-col>
-        <Divider title="Kegiatan dan Berita" subtitle="Semua kegiatan serta informasi liputan media"/>
+        <Divider
+          class="bg-primary"
+          title="Kegiatan dan Berita"
+          subtitle="Semua kegiatan serta informasi liputan media"
+        />
       </b-col>
     </b-row>
     <b-row>

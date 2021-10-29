@@ -3,8 +3,6 @@
  */
 
 import Home from '~@/pages/home';
-import Product from '~@/pages/product';
-import Post from '~@/pages/post';
 
 export default [
   {
@@ -15,11 +13,11 @@ export default [
   {
     path: '/produk',
     name: 'Product',
-    component: Product
+    component: () => import('~@/pages/product')
   },
   {
     path: '/post',
     name: 'Post',
-    component: Post
+    component: () => import('~@/pages/post')
   }
 ];

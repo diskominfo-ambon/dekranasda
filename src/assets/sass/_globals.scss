@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, blockquote {
+h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small {
   color: $dark;
   font-family: 'Quicksand', sans-serif;
 }
@@ -46,8 +46,16 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote {
 }
 
 .divider {
-  background-color: $primary;
   padding: 1.3rem 0;
+  &.bg-primary {
+    h1, p {
+      color: $white;
+    }
+
+    span {
+      background-color: $white;
+    }
+  }
   .container {
     display: flex;
     align-items: center;
@@ -63,7 +71,6 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote {
   }
 
   h1, p {
-    color: $white;
     margin: 0;
   }
   span {
@@ -71,7 +78,7 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote {
     width: 5px;
     margin: 0 .7rem;
     height: 30px;
-    background-color: $white;
+    background-color: $dark;
     border-radius: 3px;
     @include breakpoint-down(small) {
       display: none;
