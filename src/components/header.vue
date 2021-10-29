@@ -13,7 +13,6 @@
       </ul>
     </b-container>
   </div>
-
 </header>
 
 </template>

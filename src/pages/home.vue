@@ -53,14 +53,14 @@
   <section class="home__gubernur">
     <b-container>
       <b-row>
-        <b-col cols="3" lg><img :src="require('~@/assets/img/gubernur.png')" alt="Gubernur Maluku"/></b-col>
-        <b-col md="12" lg="9">
-          <h1 class="gubernur__qoute-title">Sambutan Gubernur Provinsi Maluku</h1>
+        <b-col cols="3"><img :src="require('~@/assets/img/widya.png')" alt="Gubernur Maluku"/></b-col>
+        <b-col md="12" lg="8">
+          <h1 class="gubernur__qoute-title">Sambutan Ketua Dekranasda  Provinsi Maluku</h1>
           <div class="gubernur__qoute-content">
             <blockquote>
               Dekranasda itu berdiri untuk untuk mengawal kelestarian dan kearifan lokal yang ada di Indonesia dan khususnya kita yang ada di Ambon, Maluku. Harapannya kearifan lokal ini bukan hanya bertahan, tetapi juga bisa menambah nilai lebih khususnya nilai ekonomi bagi masyarakat.
             </blockquote>
-            <span>Gubernur Provinsi Maluku - IRJEN POL (PURN) DRS. MURAD ISMAIL 2021.</span>
+            <span>Widya Pratiwi Murad - Ketua Dekranasda Provinisi Maluku. 2021.</span>
           </div>
         </b-col>
       </b-row>
