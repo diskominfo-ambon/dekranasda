@@ -1,4 +1,4 @@
-<template functional>
+<template>
 <div>
   <!-- banner -->
   <section></section>
@@ -87,9 +87,30 @@
   <!-- end -->
 
   <!-- articel -->
+  <section class="home__post">
+    <b-row>
+      <b-col>
+        <Divider title="Kegiatan dan Berita" subtitle="Semua kegiatan serta informasi liputan media"/>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col></b-col>
+      <b-col></b-col>
+    </b-row>
+  </section>
   <!-- end -->
 </div>
 </template>
+
+<script>
+import Divider from '~@/components/divider';
+
+export default {
+  components: {
+    Divider
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 @import '~@/assets/sass/home.scss';

@@ -44,3 +44,48 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote {
     justify-content: center;
   }
 }
+
+.divider {
+  background-color: $primary;
+  padding: 1.3rem 0;
+  .container {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint-down(medium) {
+      justify-content: center;
+    }
+
+    @include breakpoint-down(small) {
+      justify-content: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  h1, p {
+    color: $white;
+    margin: 0;
+  }
+  span {
+    display: block;
+    width: 5px;
+    margin: 0 .7rem;
+    height: 30px;
+    background-color: $white;
+    border-radius: 3px;
+    @include breakpoint-down(small) {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    position: relative;
+    top: -.1rem;
+    @include breakpoint-down(small) {
+      position: static;
+      line-height: 35px;
+    }
+  }
+}
