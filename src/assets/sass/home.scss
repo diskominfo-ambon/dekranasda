@@ -72,6 +72,10 @@
           &:last-child {
             margin-left: 2rem;
             align-self: center;
+
+            @include breakpoint-down(medium) {
+              margin: 0;
+            }
           }
         }
       }
@@ -120,5 +124,35 @@
         }
       }
     }
+  }
+
+  &__ads {
+    h1, p {
+      text-align: center;
+      line-height: 35px;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+
+    .row div:last-child {
+      text-align: center;
+      iframe {
+        border-radius: 12px;
+        margin-top: 1rem;
+        margin-bottom: .6rem;
+        width: 80%;
+      }
+  
+      span {
+        display: block;
+      }
+    }
+
   }
 }
