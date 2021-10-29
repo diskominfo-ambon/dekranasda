@@ -70,7 +70,7 @@
 
 
   <!-- ads -->
-  <section class="home__ads mt-5">
+  <section class="home__ads">
     <b-container>
       <b-row>
         <b-col cols="12">
@@ -78,7 +78,7 @@
           <p>Selamat Hari Batik Nasional! Yuk Bangga Pakai Batik! <span class="text-primary">#BanggaBuatanIndonesia</span></p>
         </b-col>
         <b-col cols="12">
-          <iframe width="860" height="515" src="https://www.youtube.com/embed/c-R3Vd1Gyu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/c-R3Vd1Gyu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           <span>Sumber DEKRANAS Indonesia • Youtube</span>
         </b-col>
       </b-row>
