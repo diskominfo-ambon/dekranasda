@@ -44,4 +44,49 @@ header {
       }
     }
   }
+
+  .navbar {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    .nav-item {
+      position: relative;
+      @include breakpoint-down(medium) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        text-align: center;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .nav-link {
+        @include breakpoint-up(medium) {
+          &:hover {
+            color: $primary;
+          }
+        }
+        font-weight: 500;
+        color: $dark;
+        font-size: .95rem;
+      }
+
+      &:last-child {
+        @include breakpoint-up(large) {
+          .nav-link {
+            color: $primary;
+            margin-left: .6rem;
+          }
+          &::before {
+            content: '';
+            height: 22px;
+            width: 1px;
+            background-color: $light;
+            display: block;
+            position: absolute;
+            top: .6rem;
+            left: .3rem;
+          }
+        }
+      }
+    }
+  }
 }
