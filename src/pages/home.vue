@@ -1,7 +1,36 @@
 <template>
 <div>
   <!-- banner -->
-  <section></section>
+  <section class="home__banner">
+    <b-container>
+      <b-row>
+        <b-col sm="12" lg="6">
+          <h1>Bergabung bersama perajin Maluku, untuk terus berkarya di Masa Pandemi.</h1>
+          <div class="mt-4">
+            <a class="btn btn-lg btn-primary">
+              Ikut bergabung
+            </a>
+            <span>Dengan bargabung Anda sudah menyetujui semua <a class="text-primary" href="#">kebijakan dan ketentuan</a> yang berlaku.</span>
+          </div>
+        </b-col>
+        <b-col sm="12" lg="6" class="is-d-sm-none">
+          <!-- carousel -->
+          <b-carousel
+            class="carousel__banner"
+            indicators
+            background="#ababab"
+            img-width="1024"
+            img-height="580"
+          >
+            <b-carousel-slide img-blank caption="Gambar 1"></b-carousel-slide>
+            <b-carousel-slide img-blank caption="Gambar 2"></b-carousel-slide>
+            <b-carousel-slide img-blank caption="Gambar 3"></b-carousel-slide>
+          </b-carousel>
+          <!-- end -->
+        </b-col>
+      </b-row>
+    </b-container>
+  </section>
   <!-- end -->
 
   <!-- information -->
@@ -21,7 +50,7 @@
         </b-col>
       </b-row>
       <b-row class="mt-5">
-        <b-col md="10">
+        <b-col md="12" lg="10">
           <h1 class="mb-4">Visi dan Misi Dekranasda Maluku</h1>
           <b-card class="position-relative card__label">
             <p class="label-box">Visi</p>
@@ -32,7 +61,7 @@
         </b-col>
       </b-row>
       <b-row class="mt-4">
-        <b-col md="10">
+        <b-col md="12" lg="10">
           <b-card class="position-relative card__label">
             <p class="label-box">Misi</p>
             <p>

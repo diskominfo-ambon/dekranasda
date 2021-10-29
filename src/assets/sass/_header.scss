@@ -47,6 +47,13 @@ header {
 
   .navbar {
     border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+
+    &-nav {
+      @include breakpoint-up(medium) {
+        position: relative;
+        right: -1.25rem;
+      }
+    }
     .nav-item {
       position: relative;
       @include breakpoint-down(medium) {
@@ -73,7 +80,7 @@ header {
         @include breakpoint-up(large) {
           .nav-link {
             color: $primary;
-            margin-left: .6rem;
+            margin-left: .9rem;
           }
           &::before {
             content: '';

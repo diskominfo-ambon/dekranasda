@@ -22,6 +22,8 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small {
 }
 
 .btn {
+  font-family: 'Quicksand', sans-serif;
+
   &-primary {
     background-color: $primary !important;
     border-color: $primary_dark !important;
@@ -93,6 +95,18 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small {
     @include breakpoint-down(small) {
       position: static;
       line-height: 35px;
+    }
+  }
+}
+
+.is {
+  &-d {
+    &-sm {
+      &-none {
+        @include breakpoint-down(medium) {
+          display: none;
+        }
+      }
     }
   }
 }
