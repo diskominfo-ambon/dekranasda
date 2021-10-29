@@ -21,10 +21,10 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item>Beranda</b-nav-item>
-          <b-nav-item>Dekranasda Maluku</b-nav-item>
+          <b-nav-item href="#dekranasda">Dekranasda Maluku</b-nav-item>
           <b-nav-item>Produk</b-nav-item>
-          <b-nav-item>Kegiatan dan Berita</b-nav-item>
-          <b-nav-item>Kontak</b-nav-item>
+          <b-nav-item href="#post">Kegiatan dan Berita</b-nav-item>
+          <b-nav-item href="#footer">Kontak</b-nav-item>
           <b-nav-item>Login</b-nav-item>
         </b-navbar-nav>
       </b-collapse>

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small {
   color: $dark;
   font-family: 'Quicksand', sans-serif;
@@ -54,6 +58,11 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small {
       color: $white;
     }
 
+    h1 {
+      @include breakpoint-down(medium) {
+        font-size: 1.4rem;
+      }
+    }
     span {
       background-color: $white;
     }

@@ -34,7 +34,7 @@
   <!-- end -->
 
   <!-- information -->
-  <section class="home__information">
+  <section class="home__information" id="dekranasda">
     <b-container>
       <b-row>
         <b-col>
@@ -116,7 +116,7 @@
   <!-- end -->
 
   <!-- articel -->
-  <section class="home__post">
+  <section class="home__post" id="post">
     <b-row>
       <b-col>
         <Divider

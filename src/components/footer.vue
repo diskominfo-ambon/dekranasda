@@ -1,5 +1,5 @@
 <template>
-<footer>
+<footer id="footer">
   <Divider
     class="border-bottom"
     title="Kontak"
@@ -32,7 +32,9 @@
   <b-container>
     <b-row>
       <b-col cols="12" class="text-center">
-        <small class="text-secondary">Dekranas Pemerintah Kota Ambon &copy; 2021 • Dibuat dengan 💖</small>
+
+        <!-- eslint-disable-next-line no-irregular-whitespace -->
+        <small class="text-secondary">Dekranasda Pemerintah Kota Ambon &copy; 2021 • Dibuat dengan 💖</small>
       </b-col>
     </b-row>
   </b-container>
