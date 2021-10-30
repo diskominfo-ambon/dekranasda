@@ -21,7 +21,7 @@ library.add(fas, fab);
 
 Vue.component('Icon', FontAwesomeIcon);
 
-const router = new VueRouter({ routes });
+const router = new VueRouter({ routes, mode: 'history' });
 
 new Vue({
   router,

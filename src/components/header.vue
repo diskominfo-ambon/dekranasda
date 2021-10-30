@@ -15,14 +15,25 @@
   </div>
   <b-navbar toggleable="lg">
     <b-container>
-      <b-navbar-brand href="#">LOGO</b-navbar-brand>
+      <router-link class="navbar-brand" :to="{ name: 'Home'} ">
+        Logo
+      </router-link>
+
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item>Beranda</b-nav-item>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'Home'} ">
+              Beranda
+            </router-link>
+          </li>
           <b-nav-item href="#dekranasda">Dekranasda Maluku</b-nav-item>
-          <b-nav-item>Produk</b-nav-item>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'Product' }">
+              Produk
+            </router-link>
+          </li>
           <b-nav-item href="#post">Kegiatan dan Berita</b-nav-item>
           <b-nav-item href="#footer">Kontak</b-nav-item>
           <b-nav-item>Login</b-nav-item>
