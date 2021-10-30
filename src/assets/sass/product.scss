@@ -1,0 +1,132 @@
+@import 'variables';
+@import 'mixins';
+@import 'globals';
+
+.product {
+  &__search {
+    padding-top: 3rem;
+
+    .form {
+      &-group {
+
+        margin: 0;
+        margin-bottom: .6rem;
+
+        legend {
+          font-weight: 500;
+        }
+
+        &__with {
+          &-categories {
+            display: flex;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+
+            input {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+
+    .badge {
+      &-container {
+        display: flex;
+        align-items: center;
+
+        @include breakpoint-down(small) {
+          display: block;
+        }
+      }
+
+      &-title {
+        font-size: .9rem;
+        margin-right: .8rem;
+        position: relative;
+        top: .5rem;
+        flex: 1;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 5rem;
+
+    h1 {
+      color: $primary;
+      font-weight: 700;
+      font-size: 2.3rem;
+
+      @include breakpoint-down(medium) {
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint-down(small) {
+        font-size: 1.3rem;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 35px;
+      text-align: justify;
+
+      @include breakpoint-down(medium) {
+        text-align: left;
+        font-size: .98rem;
+        line-height: 26px;
+      }
+    }
+    .searchable {
+      margin-top: 3rem;
+
+      h2 {
+        font-weight: 700;
+        line-height: 50px;
+        font-size: 2.3rem;
+
+        @include breakpoint-down(medium) {
+          font-size: 1.8rem;
+          line-height: 35px;
+        }
+
+
+        @include breakpoint-down(medium) {
+          font-size: 1.3rem;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 4rem;
+
+    .product {
+      &-lists {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 16px;
+
+        @include breakpoint-down(medium) {
+          grid-template-columns: auto auto auto;
+        }
+
+        @include breakpoint-down(small) {
+          grid-template-columns: auto;
+        }
+      }
+
+      &-detail {
+        &__modal {
+          position: relative;
+
+          @include breakpoint-down(medium) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
