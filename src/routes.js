@@ -19,5 +19,10 @@ export default [
     path: '/post',
     name: 'Post',
     component: () => import('~@/pages/post')
+  },
+  {
+    path: '*',
+    name: 'NotFound',
+    component: () => import('~@/pages/not-found')
   }
 ];
