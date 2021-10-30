@@ -119,3 +119,59 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small {
     }
   }
 }
+
+.post {
+  &__card {
+    display: flex;
+
+    @include breakpoint-down(medium) {
+      display: block;
+    }
+
+    &-body {
+      flex: 1;
+      margin-left: 1.3rem;
+      @include breakpoint-down(medium) {
+        margin: 0;
+      }
+
+      h2 {
+        font-weight: 600;
+        margin: 0;
+        margin-bottom: .5rem;
+      }
+
+      span {
+        font-size: .9rem;
+      }
+
+      p {
+        font-weight: 500;
+        text-align: justify;
+        margin-top: .5rem;
+        line-height: 30px;
+      }
+    }
+    &-cover {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 270px;
+      width: 320px;
+      background-color: $light;
+      border-radius: 4px;
+
+      p {
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+
+      @include breakpoint-down(medium) {
+        width: 100%;
+        margin-bottom: .9rem;
+      }
+
+    }
+  }
+
+}

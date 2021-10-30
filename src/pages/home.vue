@@ -126,10 +126,13 @@
         />
       </b-col>
     </b-row>
-    <b-row>
-      <b-col></b-col>
-      <b-col></b-col>
-    </b-row>
+    <b-container class="mt-5">
+      <b-row>
+        <b-col cols="12">
+          <PostCard/>
+        </b-col>
+      </b-row>
+    </b-container>
   </section>
   <!-- end -->
 </div>
@@ -137,10 +140,12 @@
 
 <script>
 import Divider from '~@/components/divider';
+import PostCard from '~@/components/post-card';
 
 export default {
   components: {
-    Divider
+    Divider,
+    PostCard
   }
 }
 </script>
