@@ -7,11 +7,7 @@
           <h1 class="post-title">Kembali Gelar 3D Printing Competition, Upaya Dekranasda Jatim Menggali Inovasi Desainer</h1>
           <!-- eslint-disable-next-line no-irregular-whitespace -->
           <span class="post-published"><span class="text-primary"><Icon icon="calendar-week"/> 12 Januari 2000</span> • Meta data • <Icon icon="grin-beam" /> Sudah dilihat oleh 239K pengguna</span>
-          <div class="share-this">
-            <p class="share-this__title">Bagikan</p>
-            <!-- This is the placement code ShareThis provides. -->
-            <div class="sharethis-inline-share-buttons"></div>
-          </div>
+          <ShareThisButton uri="https://platform-api.sharethis.com/js/sharethis.js#property=617cb7a3f80065001934eb1b&product=inline-share-buttons"/>
         </b-col>
         <b-col sm="12" md="6" lg="5">
           <div class="post-cover">
@@ -28,18 +24,11 @@
 </template>
 
 <script>
+import ShareThisButton from '~@/components/share-this-button';
+
 export default {
-  mounted() {
-    const st = window.__sharethis__
-    if (!st) {
-      const script = document.createElement('script')
-      script.src =
-        'https://platform-api.sharethis.com/js/sharethis.js#property=617cb7a3f80065001934eb1b&product=inline-share-buttons'
-      document.body.appendChild(script)
-    } else if (typeof st.initialize === 'function') {
-      st.href = window.location.href
-      st.initialize()
-    }
+  components: {
+    ShareThisButton
   }
 }
 </script>
