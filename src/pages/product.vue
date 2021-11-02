@@ -5,26 +5,7 @@
     <b-container>
       <b-row>
         <b-col sm="12" md="8">
-          <b-form>
-            <b-form-group
-              label="Telusuri produk"
-            >
-            <div class="form-group__with-categories">
-              <b-form-input
-                placeholder="Contoh: Kain tenun"
-              />
-              <!-- categories -->
-              <!-- end -->
-
-              <!-- submit -->
-              <button class="btn text-primary">
-                <Icon icon="search"/>
-              </button>
-              <!-- end -->
-            </div>
-            </b-form-group>
-          </b-form>
-
+          <SearchInput/>
 
           <!-- badges -->
           <div class="badge-container">
@@ -91,13 +72,14 @@
 import ProductCard from '~@/components/product-card';
 import ProductDetail from '~@/components/product-detail';
 import BadgeGroup from '~@/components/badge-group';
-
+import SearchInput from '~@/components/search-input';
 
 export default {
   components: {
     ProductCard,
     ProductDetail,
     BadgeGroup,
+    SearchInput
   },
   data() {
     return {

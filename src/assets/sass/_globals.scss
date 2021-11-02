@@ -306,3 +306,54 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small, label, fieldset, legend,
 .router-link-exact-active {
   color: $primary !important;
 }
+
+/**
+Search input global css
+TODO: untuk sementara ini di global csss.
+*/
+
+.filter {
+  &__categories {
+    position: relative;
+    border: 1px solid $light;
+    border-bottom-width: 0;
+    border-top-width: 0;
+    
+    &:hover {
+      background-color: $light;
+    }
+    .dropdown {
+      &:hover {
+        background: none !important;
+      }
+
+      &-menu {
+        width: 13.75rem !important;
+        left: -100px !important;
+        top: .625rem !important;
+        box-shadow: 0 3px 8px rgba($color: #000000, $alpha: 0.2);
+
+        li {
+          border-bottom: 1px solid $light;
+
+          &:last-child {
+            border-bottom-width: 0;
+          }
+        }
+      }
+      button {
+        padding: 0;
+        color: $dark !important;
+        background: none !important;
+        border: none;
+    
+        &::after {
+          margin-left: 1.5rem;
+          position: relative;
+          top: .1rem;
+        }
+      }
+    }
+  }
+
+}
