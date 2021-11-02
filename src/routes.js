@@ -2,13 +2,11 @@
  * List of page routes.
  */
 
-import Home from '~@/pages/home';
-
 export default [
   {
     path: '/',
     name: 'Home',
-    component: Home,
+    component: () => import('~@/pages/home'),
   },
   {
     path: '/produk',

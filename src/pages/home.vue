@@ -52,7 +52,7 @@
       <b-row class="mt-5">
         <b-col md="12" lg="10">
           <h1 class="mb-4">Visi dan Misi Dekranasda Maluku</h1>
-          <b-card class="position-relative card__label">
+          <b-card>
             <p class="label-box">Visi</p>
             <p>
               Menjadikan Dekranasda Provinsi jawa Timur sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
@@ -62,7 +62,7 @@
       </b-row>
       <b-row class="mt-4">
         <b-col md="12" lg="10">
-          <b-card class="position-relative card__label">
+          <b-card>
             <p class="label-box">Misi</p>
             <p>
               Menjadikan Dekranasda Provinsi jawa Timur sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.

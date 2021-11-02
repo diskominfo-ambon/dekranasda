@@ -57,14 +57,10 @@
     }
 
     .card {
-      &__label {
-        position: relative;
-
-        .label-box {
-          position: absolute;
-          top: -15px;
-          left: -8px;
-        }
+      .label-box {
+        position: absolute;
+        top: -15px;
+        left: -8px;
       }
 
       hr {
@@ -79,7 +75,7 @@
 
 
     @include breakpoint-down(medium) {
-      padding: 3.80rem;
+      padding: 3.80rem 1rem;
       text-align: center !important;
     }
 
@@ -137,12 +133,22 @@
             line-height: 32px;
             text-align: justify;
 
+            @include breakpoint-down(small) {
+              text-align: left;
+            }
+
             &::before {
               content: '“';
               font-size: 5rem;
               position: absolute;
               top: 1.125rem;
               left: -2.5rem;
+
+              @include breakpoint-down(small) {
+                display: block;
+                position: static;
+                margin-bottom: -1rem;
+              }
             }
           }
 
