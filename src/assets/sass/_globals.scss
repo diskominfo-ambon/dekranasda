@@ -190,8 +190,12 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small, label, fieldset, legend,
     border: 1px solid #ced4da;
     color: $dark;
 
+    &:hover {
+      background-color: $light;
+    }
+
     &:last-child {
-      margin: 0;
+      margin-right: 0rem;
     }
   }
 }
@@ -203,10 +207,10 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small, label, fieldset, legend,
 
     &__header {
       background-color: $light;
-      height: 12.5rem;
+      height: 11rem;
 
       @include breakpoint-down(medium) {
-        height: 15rem;
+        height: 12rem;
       }
       @include breakpoint-down(small) {
         height: 22rem;

@@ -29,11 +29,7 @@
           <!-- badges -->
           <div class="badge-container">
             <p class="badge-title">Orang-orang juga menelusuri</p>
-            <div class="badges">
-              <b-badge>Kain</b-badge>
-              <b-badge>Anyaman</b-badge>
-              <b-badge>Rajutan</b-badge>
-            </div>
+            <BadgeGroup :badges="['Kain', 'Anyaman', 'Rajutan']" v-model="badge"/>
           </div>
           <!-- end -->
         </b-col>
@@ -85,18 +81,33 @@
     </b-container>
   </section>
   <!-- end -->
+  <!-- badges disini -->
+  
+    <h1>Badge: {{ badge }}</h1>
 </div>
 </template>
 
 <script>
 import ProductCard from '~@/components/product-card';
 import ProductDetail from '~@/components/product-detail';
+import BadgeGroup from '~@/components/badge-group';
 
 
 export default {
   components: {
     ProductCard,
-    ProductDetail
+    ProductDetail,
+    BadgeGroup,
+  },
+  data() {
+    return {
+      badge: ''
+    }
+  },
+  methods: {
+    onClicked(value) {
+      console.log('badge ditekan ' + value);
+    }
   }
 }
 </script>
