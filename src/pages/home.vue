@@ -131,9 +131,9 @@
         <b-col cols="12">
           <b-skeleton-wrapper :loading="postsIsLoaded">
             <template #loading>
-              <PostCardSkeleton v-for="n in 5" :key="n" />
+              <PostCardSkeleton v-for="n in 3" :key="n" />
             </template>
-          <PostCard v-for="post in posts" :key="post.id"/>
+            <PostCard v-for="post in posts" :key="post.id" :data="post"/>
           </b-skeleton-wrapper>
         </b-col>
       </b-row>
@@ -178,7 +178,6 @@ export default {
     }
   },
   mounted() {
-
     this.fetchPosts();
   }
 }

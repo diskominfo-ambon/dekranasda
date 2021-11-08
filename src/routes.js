@@ -14,13 +14,13 @@ export default [
     component: () => import('~@/pages/product')
   },
   {
-    path: '/post',
+    path: '/berita/:slug',
     name: 'Post',
-    component: () => import('~@/pages/post')
+    component: () => import('~@/pages/post'),
   },
   {
     path: '*',
     name: 'NotFound',
     component: () => import('~@/pages/not-found')
-  }
+  },
 ];
