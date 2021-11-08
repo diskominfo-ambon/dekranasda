@@ -124,6 +124,11 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small, label, fieldset, legend,
 .post {
   &__card {
     display: flex;
+    margin-bottom: 1.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     @include breakpoint-down(medium) {
       display: block;

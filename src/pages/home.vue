@@ -129,7 +129,12 @@
     <b-container class="mt-5">
       <b-row>
         <b-col cols="12">
-          <PostCard/>
+          <b-skeleton-wrapper :loading="postsIsLoaded">
+            <template #loading>
+              <PostCardSkeleton v-for="n in 5" :key="n" />
+            </template>
+          <PostCard v-for="post in posts" :key="post.id"/>
+          </b-skeleton-wrapper>
         </b-col>
       </b-row>
     </b-container>
@@ -141,11 +146,40 @@
 <script>
 import Divider from '~@/components/divider';
 import PostCard from '~@/components/post-card';
+import PostCardSkeleton from '~@/components/post-card-skeleton';
+import useFetch from '~@/utils/use-fetch';
 
 export default {
   components: {
     Divider,
-    PostCard
+    PostCard,
+    PostCardSkeleton
+  },
+  data() {
+    return {
+      posts: []
+    }
+  },
+  computed: {
+    postsIsLoaded() {
+      return this.posts.length <= 0;
+    }
+  },
+  methods: {
+    fetchPosts() {
+      useFetch('/posts')
+        .then(res => {
+          if (res.error) throw new Error('Error 500: Terjadi masalah, saat memuat [posts].');
+          this.posts = res.data;
+
+        }).catch(err => {
+          alert(err.message);
+        });
+    }
+  },
+  mounted() {
+
+    this.fetchPosts();
   }
 }
 </script>
