@@ -209,6 +209,12 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small, label, fieldset, legend,
   &-card {
     border: 1px solid #ced4da;
     border-radius: 6px;
+    transition: all 200ms ease;
+    &:hover {
+      background-color: #eee;
+      cursor: pointer;
+      transform: scale(1.05);
+    }
 
     &__header {
       background-color: $light;
