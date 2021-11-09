@@ -5,8 +5,10 @@
     <b-container>
       <b-row>
         <b-col sm="12" md="8">
-          <SearchInput/>
-
+          <SearchInput
+            v-model="filter"
+            @submit="onFilter"
+          />
           <!-- badges -->
           <div class="badge-container">
             <p class="badge-title">Orang-orang juga menelusuri</p>
@@ -30,9 +32,25 @@
 
           <!-- search keyword -->
           <div class="searchable">
-            <h2>
-              Pencarian untuk “kain katun” tersedia 20 produk yang relevan.
-            </h2>
+            <b-skeleton-wrapper :loading="isLoading">
+              <template #loading>
+                <div class="d-flex" style="height: 2.5rem;">
+                  <b-skeleton class="mr-2" height="100%" width="20%"/>
+                  <b-skeleton height="100%" width="50%"/>
+                </div>
+              </template>
+              <h2>
+                {{
+                  searchIsSubmitted
+                    ? `Pencarian untuk “${filter.keyword}” ${
+                      productsIsNotEmpty
+                        ? 'tersedia '+ products.length+' produk yang relevan'
+                        : 'tidak tersedia'
+                      }.`
+                    : `Tersedia ${products.length} produk.`
+                }}
+              </h2>
+            </b-skeleton-wrapper>
           </div>
           <!-- end -->
         </b-col>
@@ -46,16 +64,17 @@
     <b-container>
       <b-row>
         <b-col cols="12">
-            <b-skeleton-wrapper :loading="!productsIsLoaded">
+            <b-skeleton-wrapper :loading="isLoading">
               <template #loading>
                 <div class="product-lists">
                   <ProductCardSkeleton v-for="n in 10" :key="n"/>
                 </div>
               </template>
-              <div class="product-lists">
-                <ProductCard 
-                  v-for="product in products" 
-                  :key="product.id" 
+
+              <div class="product-lists" v-if="productsIsNotEmpty">
+                <ProductCard
+                  v-for="product in products"
+                  :key="product.id"
                   :data="product"
                   @click.native="onProductCardClicked(product)"
                 />
@@ -99,15 +118,29 @@ export default {
     return {
       products: [],
       selectedProduct: {},
-      badge: ''
+      badge: '',
+      isLoading: false,
+      filter: {
+        submitted: false,
+        keyword: '',
+        categories: []
+      }
     }
   },
   computed: {
-    productsIsLoaded() {
+    searchIsSubmitted() {
+      return this.filter.submitted;
+    },
+    productsIsNotEmpty() {
       return this.products.length > 0;
     }
   },
   methods: {
+    onFilter(keyword) {
+      this.fetchProducts({
+        keyword
+      });
+    },
     onClicked(value) {
       console.log('badge ditekan ' + value);
     },
@@ -116,21 +149,30 @@ export default {
       this.$bvModal.show('bv-modal-product');
     },
     fetchProductById() {},
-    async fetchProducts() {
+    async fetchProducts(query = null) {
       try {
-        const result = await useFetch('/products');
+        this.isLoading = true;
+        let url = '/products';
 
+        if (query !== null) {
+          url += `?filter[keyword]=${query.keyword}`
+        }
+
+
+        const result = await useFetch(url);
+        console.log({result});
         if (result.error) {
           throw new Error('Error Backend: Exception response json');
         }
 
-        setTimeout(() => {
-          this.products = result.data;
-        }, 2000);
+
+        this.products = result.data;
 
       } catch (res) {
         alert('Error: Terjadi kesalahan memuat data.');
         console.warn(res.message);
+      } finally {
+        this.isLoading = false;
       }
     },
   },
