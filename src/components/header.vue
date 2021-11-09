@@ -1,4 +1,4 @@
-<template functional>
+<template>
 <header>
   <div class="header__social-contact">
     <b-container>
@@ -36,7 +36,7 @@
           </li>
           <b-nav-item href="#post">Kegiatan dan Berita</b-nav-item>
           <b-nav-item href="#footer">Kontak</b-nav-item>
-          <b-nav-item>Login</b-nav-item>
+          <b-nav-item target="__blank" :href="routeToLinkPage">Login</b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
@@ -44,3 +44,19 @@
 </header>
 
 </template>
+
+<script>
+export default {
+  name: 'Header',
+  mounted() {
+    console.log({
+      env: process.env
+    });
+  },
+  computed: {
+    routeToLinkPage() {
+      return process.env.VUE_APP_ENDPOINT + '/login';
+    }
+  }
+}
+</script>

@@ -6,13 +6,12 @@
       <b-row>
         <b-col sm="12" md="8">
           <SearchInput
-            v-model="filter"
             @submit="onFilter"
           />
           <!-- badges -->
           <div class="badge-container">
             <p class="badge-title">Orang-orang juga menelusuri</p>
-            <BadgeGroup :badges="['Kain', 'Anyaman', 'Rajutan']" v-model="badge"/>
+            <BadgeGroup :badges="['Kain', 'Anyaman', 'Rajutan']" @clicked="onFilter"/>
           </div>
           <!-- end -->
         </b-col>
@@ -121,7 +120,6 @@ export default {
       badge: '',
       isLoading: false,
       filter: {
-        submitted: false,
         keyword: '',
         categories: []
       }
@@ -129,17 +127,19 @@ export default {
   },
   computed: {
     searchIsSubmitted() {
-      return this.filter.submitted;
+      return this.filter.keyword.trim().length > 0;
     },
     productsIsNotEmpty() {
       return this.products.length > 0;
-    }
+    },
   },
   methods: {
     onFilter(keyword) {
       this.fetchProducts({
         keyword
       });
+
+      this.filter.keyword = keyword;
     },
     onClicked(value) {
       console.log('badge ditekan ' + value);
@@ -148,7 +148,6 @@ export default {
       this.selectedProduct = product;
       this.$bvModal.show('bv-modal-product');
     },
-    fetchProductById() {},
     async fetchProducts(query = null) {
       try {
         this.isLoading = true;

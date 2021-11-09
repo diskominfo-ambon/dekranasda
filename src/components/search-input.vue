@@ -5,7 +5,7 @@
   >
   <div class="form-group__with-categories">
     <b-form-input
-      v-model="filter.keyword"
+      v-model="keyword"
       placeholder="Contoh: Kain tenun"
     />
     <!-- categories -->
@@ -23,31 +23,14 @@
 <script>
 export default {
   name: 'SearchInput',
-  props: ['value'],
-  computed: {
-    filter: {
-      set(newValue) {
-        this.$emit('input', newValue)
-      },
-      get() {
-        return this.value;
-      }
-    },
+  data() {
+    return {
+      keyword: '',
+    }
   },
   methods: {
-    keywordIsEmpty() {
-      return this.value.keyword
-        .trim()
-        .length <= 0;
-    },
     onSubmit() {
-      if (this.keywordIsEmpty()) {
-        console.warn('Keyword is empty.');
-        return;
-      }
-
-      this.value.submitted = true;
-      this.$emit('submit');
+      this.$emit('submit', this.keyword);
     }
   }
 }
