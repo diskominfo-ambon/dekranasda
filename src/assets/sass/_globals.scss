@@ -163,11 +163,14 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small, label, fieldset, legend,
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 270px;
-      width: 320px;
       background-color: $light;
       border-radius: 4px;
-
+      img {
+        object-fit: cover;
+        height: 14.375rem;
+        width: 20rem;
+        border-radius: 2px;
+      }
       p {
         font-size: 1.3rem;
         font-weight: 500;

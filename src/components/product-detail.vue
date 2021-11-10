@@ -36,9 +36,7 @@
         <summary>
           Informasi Produk
         </summary>
-        <p>
-          {{ data.content }}
-        </p>
+        <div v-html="data.content"></div>
       </details>
       <details class="mt-4">
         <summary>
@@ -67,12 +65,10 @@
   </div>
 </template>
 <script>
+import helpers from '~@/mixins/helpers';
+
 export default {
   props: ['data'],
-  computed: {
-    endpoint() {
-       return process.env.VU_APP_ENDPOINT;
-    }
-  }
+  mixins: [helpers]
 }
 </script>

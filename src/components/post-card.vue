@@ -2,7 +2,7 @@
 <div class="post__card">
   <!-- image -->
   <div class="post__card-cover">
-    <p>Gambar</p>
+    <img :src="`${endpoint}/storage/${data.attachments[0]}`" alt="Gambar tidak tersedia"/>
   </div>
   <!-- content -->
   <div class="post__card-body">
@@ -20,9 +20,12 @@
 </template>
 
 <script>
+import helpers from '~@/mixins/helpers';
+
 export default {
   name: 'PostCard',
   props: ['data'],
+  mixins: [helpers],
   filters: {
     simplifyContent(text) {
       return text.length > 200

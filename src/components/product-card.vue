@@ -1,7 +1,7 @@
 <template>
 <div class="product-card">
   <div class="product-card__header">
-    <img :src="data.attachments[0]"/>
+    <img :src="`${endpoint}/storage/${data.attachments[0].path}`"/>
   </div>
   <div class="product-card__body">
     <h3 class="product-card__body-title">
@@ -19,10 +19,10 @@
 </div>
 </template>
 <script>
-import helperFilter from '~@/mixins/helper-filter';
+import helpers from '~@/mixins/helpers';
 
 export default {
   props: ['data'],
-  mixins: [helperFilter]
+  mixins: [helpers]
 }
 </script>
