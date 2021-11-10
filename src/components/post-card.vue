@@ -2,7 +2,7 @@
 <div class="post__card">
   <!-- image -->
   <div class="post__card-cover">
-    <img :src="`${endpoint}/storage/${data.attachments[0]}`" alt="Gambar tidak tersedia"/>
+    <img :src="`${endpoint}/storage/${data.attachments[0].path}`" alt="Gambar tidak tersedia"/>
   </div>
   <!-- content -->
   <div class="post__card-body">
