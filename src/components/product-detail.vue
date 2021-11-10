@@ -12,6 +12,7 @@
         </p>
       </div>
       <div class="product-detail__carousell">
+        <img :src="require('~@/assets/img/download.jpg')"/>
       </div>
     </div>
 

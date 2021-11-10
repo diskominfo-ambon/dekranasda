@@ -45,7 +45,7 @@
             </span>
           </h1>
           <p>
-            Dekranasda Jawa Timur merupakan wadah untuk mengembangkan dan membangun industri kerajinan yang memiliki citra budaya lokal di Provinsi Jawa Timur. Dekranasda mengajak para perajin untuk bergabung dan mengembangkan potensi produk kerajinan Jawa Timur bersama-sama.
+            Dekranasda Provinsi Maluku merupakan wadah untuk mengembangkan dan membangun industri kerajinan yang memiliki citra budaya lokal di Provinsi Maluku. Dekranasda mengajak para perajin untuk bergabung dan mengembangkan potensi produk kerajinan Maluku bersama-sama.
           </p>
         </b-col>
       </b-row>
@@ -55,7 +55,7 @@
           <b-card>
             <p class="label-box">Visi</p>
             <p>
-              Menjadikan Dekranasda Provinsi jawa Timur sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
+              Menjadikan Dekranasda Provinsi Maluku sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
             </p>
           </b-card>
         </b-col>
@@ -65,7 +65,7 @@
           <b-card>
             <p class="label-box">Misi</p>
             <p>
-              Menjadikan Dekranasda Provinsi jawa Timur sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
+              Menjadikan Dekranasda Provinsi Maluku sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
             </p>
             <hr/>
             <p>

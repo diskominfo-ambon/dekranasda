@@ -218,13 +218,18 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small, label, fieldset, legend,
 
     &__header {
       background-color: $light;
-      height: 11rem;
+      // height: 11rem;
 
-      @include breakpoint-down(medium) {
-        height: 12rem;
-      }
-      @include breakpoint-down(small) {
-        height: 22rem;
+      // @include breakpoint-down(medium) {
+      //   height: 12rem;
+      // }
+      // @include breakpoint-down(small) {
+      //   height: 22rem;
+      // }
+
+      img {
+        object-fit: cover;
+        width: 100%;
       }
 
     }
@@ -281,37 +286,6 @@ h1, h2, h3, h4, h5, h6, p, span, blockquote, li, small, label, fieldset, legend,
     }
   }
 
-  &-detail {
-
-    &__placeholder {
-      border: 1px solid #ced4da;
-      border-radius: 5px;
-      height: 500px;
-      position: sticky;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      top: 0px;
-
-      img {
-        width: 100px;
-        margin-bottom: .8rem;
-      }
-      h1 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: $gray;
-        margin: 0;
-        margin-bottom: .3rem;
-      }
-      p {
-        font-size: .90rem;
-        color: $gray;
-        margin: 0;
-      }
-    }
-  }
 }
 
 .router-link-exact-active {

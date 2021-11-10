@@ -1,6 +1,8 @@
 <template>
 <div class="product-card">
-  <div class="product-card__header"></div>
+  <div class="product-card__header">
+    <img :src="require('~@/assets/img/download.jpg')"/>
+  </div>
   <div class="product-card__body">
     <h3 class="product-card__body-title">
       {{ data.title | limit(30) }}
