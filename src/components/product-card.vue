@@ -1,7 +1,7 @@
 <template>
 <div class="product-card">
   <div class="product-card__header">
-    <img :src="require('~@/assets/img/download.jpg')"/>
+    <img :src="data.attachments[0]"/>
   </div>
   <div class="product-card__body">
     <h3 class="product-card__body-title">

@@ -12,7 +12,22 @@
         </p>
       </div>
       <div class="product-detail__carousell">
-        <img :src="require('~@/assets/img/download.jpg')"/>
+        <b-carousel
+          :interval="2000"
+          controls
+          indicators
+          background="#ababab"
+          img-width="100%"
+          img-height="500"
+        >
+          <b-carousel-slide
+            v-for="attachment in data.attachments"
+            :key="attachment.id"
+            :img-src="`${endpoint}/storage/${attachment.path}`"
+          />
+          
+
+        </b-carousel>
       </div>
     </div>
 
@@ -53,6 +68,11 @@
 </template>
 <script>
 export default {
-  props: ['data']
+  props: ['data'],
+  computed: {
+    endpoint() {
+       return process.env.VU_APP_ENDPOINT;
+    }
+  }
 }
 </script>
