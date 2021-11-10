@@ -19,3 +19,9 @@
   </div>
 </div>
 </template>
+
+<style scoped>
+.product-card__header {
+  height: 11rem;
+}
+</style>
