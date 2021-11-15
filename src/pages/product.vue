@@ -104,8 +104,10 @@ import BadgeGroup from '~@/components/badge-group';
 import SearchInput from '~@/components/search-input';
 import ProductCardSkeleton from '~@/components/product-card-skeleton';
 import useFetch from '~@/utils/use-fetch';
+import helpers from '~@/mixins/helpers';
 
 export default {
+  mixins: [helpers],
   components: {
     ProductCard,
     ProductDetail,
@@ -174,6 +176,13 @@ export default {
         this.isLoading = false;
       }
     },
+  },
+  watch: {
+    selectedProduct(product) {
+      if (Object.keys(product) <= 0) return;
+      
+      this.increasePageView(`/views/products/${product.id}`);
+    } 
   },
   mounted() {
     this.fetchProducts();
