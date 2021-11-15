@@ -1,7 +1,7 @@
 <template>
 <div class="post__card">
   <!-- image -->
-  <div class="post__card-cover">
+  <div class="post__card-cover skeleton">
     <b-skeleton width="100%" height="100%"></b-skeleton>
   </div>
   <!-- content -->
