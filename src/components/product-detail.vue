@@ -53,8 +53,19 @@
         <span>
           Tertarik dengan produknya?
         </span>
-        <p>
-          {{ data.priceToRupiah }}
+        <div v-if="data.isDiscount">
+          <span class="d-block my-1 fw-bold">
+            Harga awal <del><b>{{ data.priceToRupiah }}</b></del>
+          </span>
+          <div class="d-flex align-items-center">
+            <p class="mb-0 mr-1">
+              {{ data.priceWithDiscountToRupiah }} 
+            </p>
+            <b-badge variant="danger" class="text-white">{{ data.discount + '%' }}</b-badge>
+          </div>
+        </div>
+        <p v-else>
+          {{ data.priceToRupiah }} 
         </p>
       </div>
 

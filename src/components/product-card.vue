@@ -13,7 +13,12 @@
 
     <div class="product-card__body-price">
       <span>Tertarik dengan produknya?</span>
-      <p>{{ data.priceToRupiah }}</p>
+      <p v-if="data.isDiscount">
+        <span>Diskon <b-badge variant="danger">{{ data.discount }} %</b-badge></span> • {{ data.priceToRupiah }}
+      </p>
+      <p v-else>
+        {{ data.priceToRupiah }}
+      </p>
     </div>
   </div>
 </div>
