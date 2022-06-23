@@ -82,7 +82,7 @@
   <section class="home__gubernur">
     <b-container>
       <b-row>
-        <b-col cols="3"><img :src="require('~@/assets/img/widya.png')" alt="Gubernur Maluku"/></b-col>
+        <b-col cols="3"><img :src="require('~@/assets/img/ibu-walikota.png')" alt="Gubernur Maluku"/></b-col>
         <b-col md="12" lg="8">
           <h1 class="gubernur__qoute-title">Sambutan Ketua Dekranasda  Provinsi Maluku</h1>
           <div class="gubernur__qoute-content">
