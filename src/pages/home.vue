@@ -45,7 +45,7 @@
             </span>
           </h1>
           <p>
-            Dekranasda Provinsi Maluku merupakan wadah untuk mengembangkan dan membangun industri kerajinan yang memiliki citra budaya lokal di Provinsi Maluku. Dekranasda mengajak para perajin untuk bergabung dan mengembangkan potensi produk kerajinan Maluku bersama-sama.
+            Dekranasda Kota Maluku merupakan wadah untuk mengembangkan dan membangun industri kerajinan yang memiliki citra budaya lokal di Kota Maluku. Dekranasda mengajak para perajin untuk bergabung dan mengembangkan potensi produk kerajinan Maluku bersama-sama.
           </p>
         </b-col>
       </b-row>
@@ -55,7 +55,7 @@
           <b-card>
             <p class="label-box">Visi</p>
             <p>
-              Menjadikan Dekranasda Provinsi Maluku sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
+              Menjadikan Dekranasda Kota Maluku sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
             </p>
           </b-card>
         </b-col>
@@ -65,7 +65,7 @@
           <b-card>
             <p class="label-box">Misi</p>
             <p>
-              Menjadikan Dekranasda Provinsi Maluku sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
+              Menjadikan Dekranasda Kota Maluku sebagai wadah pembinaan serta pengendalian anggota pengerajin dan pengusaha yang bersaing di tingkat nasional.
             </p>
             <hr/>
             <p>
@@ -84,12 +84,12 @@
       <b-row>
         <b-col cols="3"><img :src="require('~@/assets/img/ibu-walikota.png')" alt="Gubernur Maluku"/></b-col>
         <b-col md="12" lg="8">
-          <h1 class="gubernur__qoute-title">Sambutan Ketua Dekranasda  Provinsi Maluku</h1>
+          <h1 class="gubernur__qoute-title">Sambutan Ketua Dekranasda Kota Maluku</h1>
           <div class="gubernur__qoute-content">
             <blockquote>
               Dekranasda itu berdiri untuk untuk mengawal kelestarian dan kearifan lokal yang ada di Indonesia dan khususnya kita yang ada di Ambon, Maluku. Harapannya kearifan lokal ini bukan hanya bertahan, tetapi juga bisa menambah nilai lebih khususnya nilai ekonomi bagi masyarakat.
             </blockquote>
-            <span>Widya Pratiwi Murad - Ketua Dekranasda Provinisi Maluku. 2021.</span>
+            <span>Felisa Maria Kalalo - Ketua Dekranasda kota Ambon.</span>
           </div>
         </b-col>
       </b-row>
